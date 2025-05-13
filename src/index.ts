@@ -27,10 +27,19 @@ function init(): { app: Application, server: any } {
     })
   );
 
+  // Root endpoint
   app.get(
     "/",
     handleAsyncController(async (_, res) => {
       res.status(OK).json({ status: "healthy" });
+    })
+  );
+
+  // Health check endpoint for Render
+  app.get(
+    "/healthz",
+    handleAsyncController(async (_, res) => {
+      res.status(OK).json({ status: "ok", message: "2Serv API is running" });
     })
   );
 

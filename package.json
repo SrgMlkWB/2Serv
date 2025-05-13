@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "build": "tsc",
-    "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
-    "dev": "nodemon --watch src --ext ts --ignore node_modules --ignore dist --exec npm run start",
+    "build": "npm install --save-dev @types/express @types/jsonwebtoken @types/bcrypt @types/cookie-parser @types/cors && tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --ext ts --ignore node_modules --ignore dist --exec ts-node ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
