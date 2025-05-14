@@ -1,11 +1,10 @@
 import mongoose from "mongoose";
 import logger from "./logger"
-import { DB_URI } from "../constants/env"
-
+import "dotenv/config"
 async function connect(): Promise<mongoose.Mongoose> {
   try {
     logger.info("DB: Mongodb connection succeeded");
-    return mongoose.connect(DB_URI);
+    return mongoose.connect(process.env.DB_URI || "");
   }
   
   catch (error) {
