@@ -8,12 +8,13 @@ class RoleService {
 
   constructor(roleRepository: RoleRepository) {
     this.roleRepository = roleRepository;
-
-    this.areRolesSaved().then((bool) => {
-      if (!bool) {
-        this.roleRepository.setRoles(this.ROLES);
-      }
-    });
+    setTimeout(() => {
+      this.areRolesSaved().then((bool) => {
+        if (!bool) {
+          this.roleRepository.setRoles(this.ROLES);
+        }
+      });
+    }, 1000);
   }
 
   private async areRolesSaved(): Promise<boolean> {
