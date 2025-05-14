@@ -17,12 +17,12 @@ export const NODE_ENV = getEnv("NODE_ENV");
 // server
 export const SERVER_PORT = parseInt(getEnv("SERVER_PORT", "8080"));
 
-// database
-export const DB_NAME = getEnv("DB_NAME");
-export const DB_USER = getEnv("DB_USER");
-export const DB_PASSWORD = getEnv("DB_PASSWORD");
-export const DB_PORT = getEnv("DB_PORT");
-export const DB_URI = `mongodb://localhost:${DB_PORT}/${DB_NAME}`;
+// // database
+// export const DB_NAME = getEnv("DB_NAME");
+// export const DB_USER = getEnv("DB_USER");
+// export const DB_PASSWORD = getEnv("DB_PASSWORD");
+// export const DB_PORT = getEnv("DB_PORT");
+// export const DB_URI = `mongodb://localhost:${DB_PORT}/${DB_NAME}`;
 // export const DB_URI = `mongodb://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/${DB_NAME}?authSource=admin`;
 
 // front
